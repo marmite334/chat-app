@@ -12,36 +12,7 @@
   </div>
 
   <div class ="main-content">
-    <div class ="message">
-      <div class ="upper-message">
-        <div class ="message-user">
-          ワザップジョルノ
-        </div>
-        <div class ="message-date">
-          2334/3/34(homo) 3:34:33
-        </div>
-      </div>
-      <div class ="lower-message">
-        <div class ="message-content">
-          あなたを詐欺罪と器物損壊罪で訴えます
-        </div>
-      </div>
-    </div>
-    <div class ="message">
-      <div class ="upper-message">
-        <div class ="message-user">
-          ワザップジョルノ
-        </div>
-        <div class ="message-date">
-          2334/3/34(homo) 3:34:33
-        </div>
-      </div>
-      <div class ="lower-message">
-        <div class ="message-content">
-          理由はもちろんおわかりですね
-        </div>
-      </div>
-    </div>
+    <%= render partial: 'message', collection: @messages %>
   </div>
 
   <%= form_with model: [@room, @message], class: 'chat-form', local: true do |f| %>
